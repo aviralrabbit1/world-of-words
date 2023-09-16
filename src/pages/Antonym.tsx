@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../App.css';
 import { useGetAntonyms } from '../hooks/useGetAntonyms';
 
 function Antonym() {
