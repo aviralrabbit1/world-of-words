@@ -12,9 +12,7 @@ function Synonym() {
   const [word, setWord] = useState('');
   const [synonyms, setSynonyms] = useState<Synonym[]>([]);
 
-  const fetchSynonyms = async (e: React.FormEvent) => {
-    e.preventDefault();
-
+  const fetchData = async (word: string) => {
     const SYNONYM_API_URL = `${BASE_URL}/words?rel_syn=${word}`;
 
     try {
@@ -29,6 +27,16 @@ function Synonym() {
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error);
     }
+  };
+
+  const fetchSynonyms = async (e: React.FormEvent) => {
+    e.preventDefault();
+    fetchData(word);
+  };
+
+  const synonymClicked = (newWord: string) => {
+    setWord(newWord); // Updates the input word on clicking a synonym
+    fetchData(newWord);
   };
 
   return (
@@ -46,7 +54,9 @@ function Synonym() {
       </form>
       <ul>
         {synonyms.map((synonym) => (
-          <li key={synonym.score}>{synonym.word}</li>
+          <li onClick={() => synonymClicked(synonym.word)} key={synonym.score}>
+            {synonym.word}
+          </li>
         ))}
       </ul>
     </div>
