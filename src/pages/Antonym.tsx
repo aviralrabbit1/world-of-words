@@ -21,7 +21,8 @@ function Antonym() {
       <h1>List of Antonyms</h1>
       <form onSubmit={fetchAntonyms}>
         <label htmlFor="word-input">Find antonyms for: </label>
-        <input className='placeholder'
+        <input
+          className="placeholder"
           id="word-input"
           type="text"
           onChange={(e) => setWord(e.target.value)}
@@ -29,6 +30,7 @@ function Antonym() {
         ></input>
         <button>Search</button>
       </form>
+      <h3 className="result">Here Are the results: </h3>
       {isLoading ? (
         <div>Loading....</div>
       ) : (

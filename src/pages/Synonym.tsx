@@ -30,6 +30,7 @@ function Synonym() {
         />
         <button>Search</button>
       </form>
+      <h3 className="result" >Here Are the results: </h3>
       {isLoading ? (
         <div className="loading">Loading....</div>
       ) : (
