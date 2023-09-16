@@ -6,6 +6,8 @@ type Synonym = {
   score: number;
 };
 
+const BASE_URL = import.meta.env.VITE_BASE_URL ?? `https://api.datamuse.com`;
+
 function Synonym() {
   const [word, setWord] = useState('');
   const [synonyms, setSynonyms] = useState<Synonym[]>([]);
@@ -13,10 +15,10 @@ function Synonym() {
   const fetchSynonyms = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const API_URL = `https://api.datamuse.com/words?rel_syn=slow`;
+    const SYNONYM_API_URL = `${BASE_URL}/words?rel_syn=${word}`;
 
     try {
-      const response = await fetch(API_URL);
+      const response = await fetch(SYNONYM_API_URL);
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -42,6 +44,11 @@ function Synonym() {
         ></input>
         <button>Search</button>
       </form>
+      <ul>
+        {synonyms.map((synonym) => (
+          <li key={synonym.score}>{synonym.word}</li>
+        ))}
+      </ul>
     </div>
   );
 }
