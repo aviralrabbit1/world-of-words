@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './App.css';
-import { useGetSynonyms } from './hooks/useGetSynonyms';
+import '../App.css';
+import { useGetSynonyms } from '../hooks/useGetSynonyms';
 
 function Synonym() {
   const [word, setWord] = useState('');

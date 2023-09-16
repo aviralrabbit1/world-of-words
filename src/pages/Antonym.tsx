@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './App.css';
-import { useGetAntonyms } from './hooks/useGetAntonyms';
+import '../App.css';
+import { useGetAntonyms } from '../hooks/useGetAntonyms';
 
 function Antonym() {
   const [word, setWord] = useState('');
