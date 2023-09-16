@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import './Router.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './index.css';
 
 import { Home } from './pages/Home';
 import Antonym from './pages/Antonym';
