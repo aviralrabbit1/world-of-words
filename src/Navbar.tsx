@@ -5,7 +5,7 @@ export default function Nav() {
   return (
     <div className="navbar">
       <Link to="/" className="logo">
-        Words-of-Wonder
+        World-of-Words
       </Link>
       <ul className="nav-links">
         <li>

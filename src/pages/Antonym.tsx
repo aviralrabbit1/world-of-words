@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useGetAntonyms } from '../hooks/useGetAntonyms';
+import '../Word.css';
 
 function Antonym() {
   const [word, setWord] = useState('');
@@ -16,8 +17,8 @@ function Antonym() {
   };
 
   return (
-    <div>
-      <h1>World of Words</h1>
+    <div className="container">
+      <h1>List of Antonyms</h1>
       <form onSubmit={fetchAntonyms}>
         <label htmlFor="word-input">Find antonyms for: </label>
         <input className='placeholder'

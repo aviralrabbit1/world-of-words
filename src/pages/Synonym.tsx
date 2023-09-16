@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useGetSynonyms } from '../hooks/useGetSynonyms';
+import '../Word.css';
 
 function Synonym() {
   const [word, setWord] = useState('');
@@ -11,13 +12,13 @@ function Synonym() {
   };
 
   const synonymClicked = (newWord: string) => {
-    setWord(newWord); // Updates the input word on clicking a synonym
+    setWord(newWord);
     getSynonyms(newWord);
   };
 
   return (
-    <div>
-      <h1>World of Words</h1>
+    <div className="container">
+      <h1>List of Synonyms</h1>
       <form onSubmit={fetchSynonyms}>
         <label htmlFor="word-input">Find synonyms for: </label>
         <input
@@ -26,11 +27,11 @@ function Synonym() {
           type="text"
           onChange={(e) => setWord(e.target.value)}
           value={word}
-        ></input>
+        />
         <button>Search</button>
       </form>
       {isLoading ? (
-        <div>Loading....</div>
+        <div className="loading">Loading....</div>
       ) : (
         <ul>
           {synonyms.map((synonym) => (
