@@ -1,10 +1,12 @@
+import Antonym from './Antonym';
 import './App.css';
-import Synonym from './Synonym';
+// import Synonym from './Synonym';
 
 function App() {
   return (
     <>
-      <Synonym />
+      {/* <Synonym /> */}
+      <Antonym/>
     </>
   );
 }

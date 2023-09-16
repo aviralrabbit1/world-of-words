@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import { fetchData } from './api/fetchSynonyms';
 import { useGetSynonyms } from './hooks/useGetSynonyms';
 
 function Synonym() {
