@@ -21,6 +21,7 @@ function Synonym() {
       <form onSubmit={fetchSynonyms}>
         <label htmlFor="word-input">Find synonyms for: </label>
         <input
+          className="placeholder"
           id="word-input"
           type="text"
           onChange={(e) => setWord(e.target.value)}

@@ -20,7 +20,7 @@ function Antonym() {
       <h1>World of Words</h1>
       <form onSubmit={fetchAntonyms}>
         <label htmlFor="word-input">Find antonyms for: </label>
-        <input
+        <input className='placeholder'
           id="word-input"
           type="text"
           onChange={(e) => setWord(e.target.value)}
