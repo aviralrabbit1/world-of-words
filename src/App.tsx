@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import './App.css';
+import Synonym from './Synonym';
 
 function App() {
   return (
     <>
-      <div>World of Words</div>
+      <Synonym />
     </>
   );
 }
