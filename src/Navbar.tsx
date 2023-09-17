@@ -4,12 +4,19 @@ import './index.css';
 export default function Nav() {
   return (
     <div className="navbar">
-      <div className="logo">Words-of-Wonder</div>
+      <Link to="/" className="logo">
+        World-of-Words
+      </Link>
       <ul className="nav-links">
-        <Link to="/">Home</Link>
-        {/* <Link to="/*"></Link> */}
-        <Link to="/antonym">Antonym</Link>
-        <Link to="/synonym">Synonym</Link>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/antonym">Antonym</Link>
+        </li>
+        <li>
+          <Link to="/synonym">Synonym</Link>
+        </li>
       </ul>
     </div>
   );

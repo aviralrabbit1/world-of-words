@@ -1,0 +1,95 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 28px;
+  /* color: #333; */
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  /* color: #333; */
+  margin-right: 10px;
+}
+
+input {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #0077b6;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00588b;
+}
+
+/* Loading message styles */
+.loading {
+  font-size: 20px;
+  /* color: #333; */
+  margin-top: 20px;
+}
+
+.result {
+  font-size: 24px;
+  color: #0077b6;
+  margin-top: 20px;
+}
+
+/* Word list styles */
+ul {
+  list-style: decimal;
+  list-style-position: unset;
+  padding: 10;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+li {
+  font-size: 18px;
+  /* color: #333; */
+  margin: 5px 15px;
+  cursor: pointer;
+  /* width: calc(50% - 10px); */
+}
+
+li:hover {
+  color: #0077b6;
+}
+
+@media screen and (min-width: 768px) {
+  li {
+    width: calc(33.33% - 45px); /* 33.33% width for larger screens */
+    margin: 5px 15px;
+  }
+}
