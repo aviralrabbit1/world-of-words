@@ -6,6 +6,7 @@ import Antonym from './pages/Antonym';
 import Synonym from './pages/Synonym';
 import { NotFound } from './pages/NotFound';
 import Navbar from './Navbar';
+import Rhymes from './pages/Rhymes';
 
 export const Router = () => {
   return (
@@ -15,6 +16,7 @@ export const Router = () => {
         <Route index element={<Home />} />
         <Route path="/antonym" element={<Antonym />} />
         <Route path="/synonym" element={<Synonym />} />
+        <Route path="/rhymes" element={<Rhymes />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
