@@ -21,3 +21,8 @@ npm i --save-dev @types/node
 ```js
 ${BASE_URL}/words?rel_syn=${word}
 ```
+
+### Adding react-loader,
+```sh
+npm install react-loader-spinner --save
+```
