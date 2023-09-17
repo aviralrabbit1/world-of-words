@@ -34,31 +34,29 @@ function Synonym() {
         />
         <button>Search</button>
       </form>
-      {hasSynonyms && (
-        <h3 className="result">Here Are the results:</h3>
-      )}
+      {hasSynonyms && <h3 className="result">Here Are the results:</h3>}
       {/* {hasSynonyms ? (
         <h3 className="result">Here Are the results:</h3>
       ) : (
         <h3 className="result">There are no results.</h3>
       )} */}
       {isLoading ? (
-                <div>
-                Loading....
-                <MagnifyingGlass
-                  visible={true}
-                  height="80"
-                  width="80"
-                  ariaLabel="MagnifyingGlass-loading"
-                  wrapperStyle={{}}
-                  wrapperClass="MagnifyingGlass-wrapper"
-                  glassColor="#c0efff"
-                  color="#e15b64"
-                />
-              </div>
+        <div>
+          Loading....
+          <MagnifyingGlass
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="MagnifyingGlass-loading"
+            wrapperStyle={{}}
+            wrapperClass="MagnifyingGlass-wrapper"
+            glassColor="#c0efff"
+            color="#e15b64"
+          />
+        </div>
       ) : (
         <ul>
-          {synonyms.map((synonym, index) => (
+          {synonyms.map((synonym) => (
             <li
               onClick={() => synonymClicked(synonym.word)}
               key={synonym.score}
