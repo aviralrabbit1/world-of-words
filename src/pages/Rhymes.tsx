@@ -56,8 +56,8 @@ function Rhymes() {
         </div>
       ) : (
         <ul>
-          {rhymes.map((rhymes) => (
-            <li onClick={() => rhymesClicked(rhymes.word)} key={rhymes.score}>
+          {rhymes.map((rhymes, index) => (
+            <li onClick={() => rhymesClicked(rhymes.word)} key={index}>
               {rhymes.word}
             </li>
           ))}

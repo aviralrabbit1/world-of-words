@@ -58,10 +58,10 @@ function Antonym() {
         </div>
       ) : (
         <ul>
-          {antonyms.map((antonym) => (
+          {antonyms.map((antonym, index: number) => (
             <li
               onClick={() => antonymClicked(antonym.word)}
-              key={antonym.score}
+              key={index}
             >
               {antonym.word}
             </li>

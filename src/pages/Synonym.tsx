@@ -56,10 +56,10 @@ function Synonym() {
         </div>
       ) : (
         <ul>
-          {synonyms.map((synonym) => (
+          {synonyms.map((synonym, index) => (
             <li
               onClick={() => synonymClicked(synonym.word)}
-              key={synonym.score}
+              key={index}
             >
               {synonym.word}
             </li>
