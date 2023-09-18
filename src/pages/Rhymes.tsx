@@ -1,30 +1,30 @@
 import { useState } from 'react';
-import { useGetSynonyms } from '../hooks/useGetSynonyms';
+import { useGetRhymes } from '../hooks/useGetRhymes';
 import '../Word.css';
 import { MagnifyingGlass } from 'react-loader-spinner';
 
-function Synonym() {
+function Rhymes() {
   const [word, setWord] = useState('');
-  const { isLoading, synonyms, getSynonyms } = useGetSynonyms();
-  const [hasSynonyms, setHasSynonyms] = useState(false); // State variable to track if the result has any synonyms
+  const { isLoading, rhymes, getRhymes } = useGetRhymes();
+  const [hasRhymes, setHasRhymes] = useState(false); // State variable to track if the result has any rhyme
 
-  const fetchSynonyms = async (e: React.FormEvent) => {
+  const fetchRhymes = async (e: React.FormEvent) => {
     e.preventDefault();
-    getSynonyms(word);
-    setHasSynonyms(false); // Reset the state when searching for new synonyms from the list
+    getRhymes(word);
+    setHasRhymes(false); // Reset the state when searching for new rhyme from the list
   };
 
-  const synonymClicked = (newWord: string) => {
+  const rhymesClicked = (newWord: string) => {
     setWord(newWord);
-    getSynonyms(newWord);
-    setHasSynonyms(synonyms.length > 0); // Set the state based on whether there are synonyms
+    getRhymes(newWord);
+    setHasRhymes(rhymes.length > 0); // Set the state based on whether there are rhyme
   };
 
   return (
     <div className="container">
       <h1>World of Words</h1>
-      <form onSubmit={fetchSynonyms}>
-        <label htmlFor="word-input">Find synonyms for: </label>
+      <form onSubmit={fetchRhymes}>
+        <label htmlFor="word-input">Find words rhyming with: </label>
         <input
           className="placeholder"
           id="word-input"
@@ -34,8 +34,8 @@ function Synonym() {
         />
         <button>Search</button>
       </form>
-      {hasSynonyms && <h3 className="result">Here Are the results:</h3>}
-      {/* {hasSynonyms ? (
+      {hasRhymes && <h3 className="result">Here Are the results:</h3>}
+      {/* {hasRhymes ? (
         <h3 className="result">Here Are the results:</h3>
       ) : (
         <h3 className="result">There are no results.</h3>
@@ -56,12 +56,9 @@ function Synonym() {
         </div>
       ) : (
         <ul>
-          {synonyms.map((synonym, index) => (
-            <li
-              onClick={() => synonymClicked(synonym.word)}
-              key={index}
-            >
-              {synonym.word}
+          {rhymes.map((rhymes, index) => (
+            <li onClick={() => rhymesClicked(rhymes.word)} key={index}>
+              {rhymes.word}
             </li>
           ))}
         </ul>
@@ -70,4 +67,4 @@ function Synonym() {
   );
 }
 
-export default Synonym;
+export default Rhymes;

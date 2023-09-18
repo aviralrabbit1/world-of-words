@@ -17,6 +17,9 @@ export default function Nav() {
         <li>
           <Link to="/synonym">Synonym</Link>
         </li>
+        <li>
+          <Link to="/rhymes">Rhymes</Link>
+        </li>
       </ul>
     </div>
   );
