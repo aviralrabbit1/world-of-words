@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './index.css';
+import { menuItems } from './MenuItems';
 
 export default function Nav() {
   return (
@@ -8,18 +9,13 @@ export default function Nav() {
         World-of-Words
       </Link>
       <ul className="nav-links">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/antonym">Antonym</Link>
-        </li>
-        <li>
-          <Link to="/synonym">Synonym</Link>
-        </li>
-        <li>
-          <Link to="/rhymes">Rhymes</Link>
-        </li>
+        {menuItems.map((menu: { url: string | undefined; title: string }, index: number) => {
+          return (
+            <li className="menu-items" key={index}>
+              <a href={menu.url}>{menu.title}</a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
