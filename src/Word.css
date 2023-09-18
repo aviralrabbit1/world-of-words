@@ -67,7 +67,7 @@ button:hover {
 
 /* Word list styles */
 ul {
-  list-style: decimal;
+  list-style: none;
   list-style-position: unset;
   padding: 10;
   display: flex;

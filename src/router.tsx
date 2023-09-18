@@ -14,6 +14,7 @@ export const Router = () => {
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
+        {/* <Route path="/datamuse" element={<Datamuse />} /> */}
         <Route path="/antonym" element={<Antonym />} />
         <Route path="/synonym" element={<Synonym />} />
         <Route path="/rhymes" element={<Rhymes />} />

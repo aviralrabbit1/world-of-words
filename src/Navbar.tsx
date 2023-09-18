@@ -1,22 +1,30 @@
 import { Link } from 'react-router-dom';
 import './index.css';
-import { menuItems } from './MenuItems';
+import { menuItemsList } from './menuitems';
+import Dropdown from './Dropdown';
 
 export default function Nav() {
+  // console.log(menuItemsList);
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <Link to="/" className="logo">
         World-of-Words
       </Link>
       <ul className="nav-links">
-        {menuItems.map((menu: { url: string | undefined; title: string }, index: number) => {
-          return (
-            <li className="menu-items" key={index}>
-              <a href={menu.url}>{menu.title}</a>
-            </li>
-          );
-        })}
+        <Dropdown items={menuItemsList} />
+        {/* <li className="nav-links">
+          {menuItemsList.submenu ? (
+            <>
+              <button type="button" aria-haspopup="menu">
+                {menuItemsList.title}{' '}
+              </button>
+              <Dropdown submenu={menuItemsList.submenu} />
+            </>
+          ) : (
+            <a href={menuItemsList.url}>{menuItemsList.title}</a>
+          )}
+        </li> */}
       </ul>
-    </div>
+    </nav>
   );
 }
