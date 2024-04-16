@@ -142,3 +142,32 @@ button:focus-visible {
   background-color: #0077b6;
   color: #fff;
 }
+
+.word-definitions {
+  text-align: center;  /* Center the content horizontally */
+  margin: 50px auto;  /* Add some margin for spacing */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;  /* Add rounded corners */
+  /* background-color: #f5f5f5; */
+}
+
+.word-definitions h2 {
+  margin-bottom: 20px;
+}
+
+.word-definitions ul {
+  list-style: none;  /* Remove default bullet points */
+  padding: 0;
+}
+
+.word-definitions li {
+  margin-bottom: 10px;
+  font-weight: bold; /* Make definition terms bolder */
+}
+
+.word-definitions li span {  /* Style example words */
+  font-style: italic;
+  color: #d51b1b;
+}
+
