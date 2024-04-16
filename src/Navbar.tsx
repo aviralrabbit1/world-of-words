@@ -23,6 +23,9 @@ export default function Nav() {
         <li>
           <Link to="/followers">Followers</Link>
         </li>
+        <li>
+          <Link to="/predecessors">Predecessors</Link>
+        </li>
       </ul>
     </div>
   );
