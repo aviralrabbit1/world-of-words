@@ -21,7 +21,7 @@ export const Router = () => {
         <Route path="/rhymes" element={<Rhymes />} />
         <Route path="/followers" element={<Followers />} />
         <Route path="/predecessors" element={<Predecessors />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
