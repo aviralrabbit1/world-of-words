@@ -19,6 +19,9 @@ export default function Nav() {
         </li>
         <li>
           <Link to="/rhymes">Rhymes</Link>
+        </li> 
+        <li>
+          <Link to="/followers">Followers</Link>
         </li>
       </ul>
     </div>
